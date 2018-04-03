@@ -1,0 +1,107 @@
+* { 
+  box-sizing: border-box;
+}
+
+h2, ul, p, li{
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main{
+  height: calc(100% - 2.5em);
+  overflow: hidden;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #979797;
+  background: black;
+  height: 2.5em;
+}
+
+section{
+  height: 25%;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.3s ease-in;
+}
+
+section > h2, section li{
+  color: #979797;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+section > h2 {
+  font-size: 28px;
+}
+
+section li {
+  list-style-type: none;
+}
+
+section > ul{
+  padding: 0;
+  transition: font-size 0.3s ease-in;
+}
+
+.element{
+  cursor: pointer;
+}
+
+.contracted{
+  height: 0;
+}
+
+.contracted-content{
+  font-size: 0;
+}
+
+.contracted-to-title{
+  height: 3em;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.contracted-to-title > h2{
+  cursor: pointer;
+  pointer-events: all;
+}
+
+#content > p {
+  font-size: 800px;
+}
+
+#content{
+  height: 100%;
+  overflow: hidden;
+}
+
+#sectionA{
+  background: linear-gradient(to bottom right, rgb(1,35,50), rgb(1,20,30));
+}
+
+#sectionB{
+  background: linear-gradient(to bottom right, rgb(15,50,5), rgba(10,30,0));
+}
+
+#sectionC{
+  background: linear-gradient(to bottom right, rgb(0, 50, 50), rgb(0, 30, 30));
+}
+
+#sectionD{
+  background: linear-gradient(to bottom right, rgb(35,5,50), rgb(5,10,20));
+}
