@@ -34,10 +34,9 @@
       return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
     },
     moveToTop: function moveToTopHandler(e){
-      if (!this.hasClass(e.target, "element")){
+      if (!this.hasClass(e.target, "element") || !this.hasClass(e.target, "contracted-to-title")){
         return false;
       }
-
       const main = App.current.parentNode;
       main.removeChild(App.current);
       main.prepend(App.current);
@@ -45,7 +44,6 @@
     selectSection: function selectSectionHandler(e){
       this.current = e.target;
 
-      console.log("current: ", this.current)
       this.current.addEventListener('transitionend', this.moveToTop, true);
       this.content.innerHTML = this.sections[this.current.id].content;
       for (item of Object.keys(this.sections)){
