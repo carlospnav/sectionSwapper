@@ -39,7 +39,10 @@ escopo de função com uma IIFE. */
       return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
     },
     /*Move o elemento do Dom para a primeira posição de seu parent node, somente
-    se ele for uma das 4 seções e se não estiver já expandido.*/
+    se ele for uma das 4 seções e se não estiver já expandido. Poderia ter usado
+    a opção once do addEventListener que já resolveria este problema. No entanto,
+    o tempo de perguntas havia passado e não sabia qual era a versão do navegador.
+    No meu firefox antigo(v.48), não funcionava, resolvi então não usar.*/
     moveToTop: function moveToTopHandler(e){
       if (!this.hasClass(e.target, "element") || !this.hasClass(e.target, "contracted-to-title")){
         return false;
@@ -66,7 +69,7 @@ escopo de função com uma IIFE. */
       } 
       this.current.classList.add("contracted-to-title");
       this.current.querySelector("ul").classList.add("contracted-content");
-      this.title().addEventListener('click', this.returnToMain, { once: true});
+      this.title().addEventListener('click', this.returnToMain);
     },
     /*Contrai a seção específica para voltar à posição original e reseta o estado do 
     App. */
