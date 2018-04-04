@@ -56,6 +56,7 @@ section li {
 section > ul{
   padding: 0;
   transition: font-size 0.3s ease-in;
+  pointer-events: none;
 }
 
 .element{
@@ -95,7 +96,7 @@ section > ul{
 }
 
 #sectionB{
-  background: linear-gradient(to bottom right, rgb(15,50,5), rgba(10,30,0));
+  background: linear-gradient(to bottom right, rgb(15,50,5), rgb(10,30,0));
 }
 
 #sectionC{
