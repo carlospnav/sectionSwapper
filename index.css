@@ -52,11 +52,11 @@ section > h2 {
 section li {
   list-style-type: none;
   font-size: 14px;
+  transition: font-size 0.3s ease-in;
 }
 
 section > ul{
   padding: 0;
-  transition: font-size 0.3s ease-in;
   pointer-events: none;
 }
 
@@ -68,7 +68,7 @@ section > ul{
   height: 0;
 }
 
-.contracted-content{
+.contracted-content > li{
   font-size: 0;
 }
 
