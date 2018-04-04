@@ -24,7 +24,7 @@ footer{
   align-items: center;
   color: #979797;
   background: black;
-  height: 2.5em;
+  height: 3em;
 }
 
 section{
@@ -46,11 +46,12 @@ section > h2, section li{
 }
 
 section > h2 {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 section li {
   list-style-type: none;
+  font-size: 14px;
 }
 
 section > ul{
@@ -83,11 +84,11 @@ section > ul{
 }
 
 #content > p {
-  font-size: 800px;
+  font-size: 200px;
 }
 
 #content{
-  height: 100%;
+  height: calc(100% - 3em);
   overflow: hidden;
 }
 
@@ -105,4 +106,30 @@ section > ul{
 
 #sectionD{
   background: linear-gradient(to bottom right, rgb(35,5,50), rgb(5,10,20));
+}
+
+@media (min-width: 350px){
+  #content > p {
+    font-size: 400px;
+  }
+
+  section li{
+    font-size: 16px;
+  }
+
+  section > h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 550px){
+  #content > p {
+    font-size: 600px;
+  }
+}
+
+@media (min-width: 810px){
+  #content > p {
+    font-size: 800px;
+  }
 }

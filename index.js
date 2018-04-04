@@ -1,7 +1,3 @@
-/* TODO 
-  - Make transitionend run only ONCE per section clicked.
-*/
-
 (function(){
   const App = {
     sections: {},
